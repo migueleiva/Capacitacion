@@ -1,0 +1,4 @@
+SERVER:  [ INFO] [25-04-2015 12:33:00.319] (TestLog4j.java:15) - LOG en nivel INFO
+SERVER:  [ERROR] [25-04-2015 12:33:00.325] (TestLog4j.java:16) - LOG en nivel ERROR con el log4j
+SERVER:  [ INFO] [25-04-2015 12:36:27.796] (TestLog4j.java:15) - LOG en nivel INFO
+SERVER:  [ERROR] [25-04-2015 12:36:27.802] (TestLog4j.java:16) - LOG en nivel ERROR con el log4j

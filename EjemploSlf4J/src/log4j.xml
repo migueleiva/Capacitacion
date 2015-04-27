@@ -1,0 +1,16 @@
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="FILE_TEST" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="logs/test.log" />
+		<layout class="org.apache.log4j.EnhancedPatternLayout">
+			<param name="ConversionPattern" 
+			value="%d{dd MMM yyyy - HH:mm:ss} [%-5p] %c{5} - %m%n" />
+		</layout>
+	</appender>
+	<root>
+		<priority value="trace" />
+		<appender-ref ref="FILE_TEST" />
+	</root>
+</log4j:configuration>

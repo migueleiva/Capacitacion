@@ -1,0 +1,42 @@
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="consola" class="org.apache.log4j.ConsoleAppender">
+		<param name="target" value="System.out" />
+		<layout class="org.apache.log4j.EnhancedPatternLayout">
+			<param name="ConversionPattern" 
+			value="%d{dd MMM yyyy - HH:mm:ss} [%-5p] %c{5} - %m%n" />
+		</layout>
+	</appender>
+	
+	
+	<appender class="org.apache.log4j.DailyRollingFileAppender"
+		name="FILE_APP">
+		<param name="File" value="C:/carpeta/ejemplolog4j.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="SERVER:	${weblogic.Name}	[%5p]	[%d{dd-MM-yyyy	HH:mm:ss.SSS}]	(%F:%L)	-	%m%n" />
+		</layout>
+	</appender>
+	
+	<logger name="com.mleiva.capacitacion.logger">
+		<level value="info" />
+		<appender-ref ref="FILE_APP" />
+	</logger>
+	
+		
+	<logger name="...ASAS....ASD.AS..DAS.D.DAS..DA">
+		<level value="info" />
+		<appender-ref ref="consola" />
+	</logger>
+	
+	
+	<!-- 
+	
+	<root>
+		<priority value="trace" />
+		<appender-ref ref="consola" />
+	</root>-->
+</log4j:configuration>
